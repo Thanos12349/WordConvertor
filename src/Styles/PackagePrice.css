@@ -1,0 +1,131 @@
+.package-container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #2a9d8f, #264653);
+  border-radius: 50px 50px 0 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: auto;
+}
+
+.package-title {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.package-table {
+  display: flex;
+  min-width: 900px;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* Tariff column */
+.tariff-column {
+  flex: 0 0 130px;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 32px 0 0 32px;
+  overflow: hidden;
+}
+
+.tariff-header {
+  padding: 15px 10px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.tariff-row {
+  padding: 12px 8px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+}
+
+/* Package columns */
+.package-column {
+  flex: 1;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 32px 32px 0;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: visible; /* Key Fix */
+  min-height: 100%;
+}
+
+.package-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.package-header {
+  padding: 20px 10px;
+  font-weight: 700;
+  font-size: 18px;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.package-row {
+  padding: 12px 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+}
+
+/* Inclusions button */
+.inclusions-btn {
+  padding: 10px 15px;
+  margin: 8px auto;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+  max-width: 90%;
+}
+
+.inclusions-btn:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
+
+/* Inclusion list */
+.inclusions-list {
+  list-style: none;
+  margin: 10px auto 15px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 12px 15px;
+  width: 90%;
+  animation: expandInclusion 0.4s ease forwards;
+}
+
+@keyframes expandInclusion {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inclusions-list li {
+  padding: 5px 0;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.inclusions-list li:last-child {
+  border-bottom: none;
+}
